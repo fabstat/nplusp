@@ -34,9 +34,9 @@
 	    <h1>ECO-Jeopardy</h1>
 	    <table>
 	      <tr>
-		<th>Category 1</th>
-		<th>Category 2</th>
-		<th>Category 3</th>
+		<th>Nitrogen</th>
+		<th>Phosphorous</th>
+		<th>Lakes of the World</th>
 	      </tr>
 	      <tr>
 		<td><a href="#/2/1">$100</a></td>
@@ -56,65 +56,65 @@
 	    </table>
 	  </section>
 	  <section>
-	    <h2>Category 1 $100</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Nitrogen  $100</h2>
+	    <p>Nearly 90% of N fertilizer now being applied is of this form.<p>
+	    <p class="fragment">Question: What is urea?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 2 $100</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Phosphorous $100</h2>
+	    <p>This agency's approach to remediating HAB pollution is to mandate total maximum daily loads for P.<p>
+	    <p class="fragment">Question: What is the US EPA?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 3 $100</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Lakes of the World $100</h2>
+	    <p>This lake had a 50% reduction in chlorophyll after nutrients reduction from sewage diversion.<p>
+	    <p class="fragment">Question: What is Lake Albufera?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 1 $200</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Nitrogen $200</h2>
+	    <p>High concentrations of this form of reactive N are required for the expression of toxin production genes.<p>
+	    <p class="fragment">Question: What is NH$_4^+$?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 2 $200</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Phosphorous $200</h2>
+	    <p>This metabolic pathway increases with increased P driven eutrophication.<p>
+	    <p class="fragment">Question: What is Denitrification?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 3 $200</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Lakes of the World $200</h2>
+	    <p>In 2014, this lake's cyanobacterial blooms cost 65 million dollars to the cities where it lies.<p>
+	    <p class="fragment">Question: What is Lake Erie?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 1 $300</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Nitrogen $300</h2>
+	    <p>You might have to twist this little guy's cylinder to get it to fix you some nitrogen.<p>
+	    <p class="fragment">Question: What is Cylindrospermopsis?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 2 $300</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Phosphorous $300</h2>
+	    <p>Internal loading of nutrients is particularly high where concentrations of this ion is high.<p>
+	    <p class="fragment">Question: What is sulfate?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
 	  <section>
-	    <h2>Category 3 $300</h2>
-	    <p>Question...<p>
-	    <p class="fragment">Answer</p>
+	    <h2>Lakes of the World $300</h2>
+	    <p>In the 1980's this lake's blooms were cause by Anabaena circinalis.<p>
+	    <p class="fragment">Question: What is Lake Okeechobee?</p>
 	    <audio src="https://archive.org/download/JeopardyTheme/Jeopardy.mp3"></audio>
 	    <a href="#/2">Back</a>
 	  </section>
@@ -131,11 +131,16 @@
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
       autoPlayMedia: true,
+      math: {
+      mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+      config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+      },
       dependencies: [
       { src: 'plugin/markdown/marked.js' },
       { src: 'plugin/markdown/markdown.js' },
       { src: 'plugin/notes/notes.js', async: true },
-      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/math/math.js', async: true }
       ]
       });
     </script>
